@@ -1,0 +1,51 @@
+import java.util.*;
+
+// find the given element in sorted and rotated array
+class Searchj
+{
+
+    static int shiftedarr(int arr[],int start, int end,int key)
+    {
+        while(start<=end)
+         int mid=start + (end-start)/2;
+
+          if(arr[mid]==key)
+           return mid;
+
+           if(arr[start]<=arr[mid])
+            { // left sorted
+                if(key>=arr[start] && key<=arr[mid])
+                    { // explore left part
+                        end=mid-1;
+                    }
+                else  // explore right part
+                    {
+                        start=mid+1;
+                    }
+
+            }
+
+           else
+           {  // right sorted
+                if(key>=arr[mid] && key<=arr[end])
+                    {
+                       start=mid+1; 
+                    }
+                else  // explore left part
+                {
+                        end=mid-1;
+                }
+
+           }
+           return -1;
+    }
+
+
+    public static void main(String args[])
+    {
+        int arr[] = {50,60,70,80,90,10,20,30,40 };
+        int n = arr.length();
+        int result = shiftedarr( arr,0,n-1,80 );
+        System.out.println(result);
+    }
+}
