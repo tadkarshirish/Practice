@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="C:\Users\S\Desktop\Project HTM\style.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylelogin.css">
+     <link href="https://fonts.googleapis.com/css2?family=Alata&family=Slabo+27px&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Share&display=swap" rel="stylesheet">
+   <!-- <script src="login.js"></script> -->
+<script>
+  function login1()
+        {
+            console.log("button click");
+            var ema=document.getElementById("username").value;
+            var pa=document.getElementById("password").value;
+
+            var emailC=localStorage.getItem("name1");
+            var passC=localStorage.getItem("pass");
+
+            if(ema==emailC && pa==passC )
+            {
+                window.open('Student.html');
+            }
+            else if(ema=="admin"&& pa=="admin")
+            {
+                window.open('Student.html');
+            }
+            else{
+            alert("wrong informatiln");
+            }
+
+        }
+</script>
+  
+     <title>Document</title>
+</head>
+<body>
+    <main>
+    <div class="div1" > C-DAC STUDENT PORTAL</div>
+    <div ><a class="div2" href="../index.html" style="text-decoration: none;" >HOME</a></div>
+    <div  float:left;><a class="div3" href="../Courses/Courses.html" style="text-decoration: none;" >COURSE</a> </div>
+    <div  ><a class="div4" href="" style="text-decoration: none;">DOWNLOAD</a></div>
+    <div ><a class="div5" href="../gallery/Gallery.html" style="text-decoration: none;">GALLERY</a></div>
+    <div ><a class="div7" href="../Login/login.html" style="text-decoration: none;"> LOGIN </a></div>
+    <div class="div6">
+
+<br>
+<center>
+<div id="login-form-wrap">
+  <h2>Login</h2>
+  <form id="login-form">
+    <p>
+    <input type="text" id="username" name="username" placeholder="Username" required><span></span><span></span></i>
+    </p>
+    <p>
+    <input type="text" id="password" name="password" placeholder="Password" required><span></span><span></span></i>
+    </p>
+    <p>
+    <input type="submit" id="login" value="Login" onclick="login1()">
+   
+
+    </p>
+  </form></center>
+
+
+
+
+
+    </div>
+    
+    <div class="div9"><p> Website Policies|Copyright Policy|Terms & Conditions |Help|© 2022 C-DAC. All rights reserved|Last Updated: Tuesday, January 04, 2022</p></div>
+    </main>
+   
+</body>
+</html>

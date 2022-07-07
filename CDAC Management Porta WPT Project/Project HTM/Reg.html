@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="C:\Users\S\Desktop\Project HTM\style.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Reg.css">
+     <link href="https://fonts.googleapis.com/css2?family=Alata&family=Slabo+27px&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Share&display=swap" rel="stylesheet">
+     <title>Document</title>
+     <script>
+        function signup()
+      {
+      
+          var email = document.getElementById("Username").value;
+          var pass= document.getElementById("password").value;
+
+
+      localStorage.setItem("name1",email);
+      localStorage.setItem("pass",pass);
+         
+       alert("Registration Succesfull");   
+      }
+
+     </script>
+</head>
+<body>
+    <main>
+    <div class="div1" > C-DAC STUDENT PORTAL</div>
+    <div ><a class="div2" href="./index.html" style="text-decoration: none;" >HOME</a></div>
+    <div  float:left;><a class="div3" href="./Courses/Courses.html" style="text-decoration: none;" >COURSE</a> </div>
+    <div  ><a class="div4" href="" style="text-decoration: none;">DOWNLOAD</a></div>
+    <div ><a class="div5" href="./gallery/Gallery.html" style="text-decoration: none;">GALLERY</a></div>
+    <div ><a class="div7" href="../Project HTM/Login/login.html" style="text-decoration: none;"> LOGIN </a></div>
+    <div class="div6">
+        <div class="container">
+            <div class="title">Registration</div>
+            <div class="content">
+              <form action="#">
+                <div class="user-details">
+                  <div class="input-box">
+                    <span class="details">Full Name</span>
+                    <input type="text" placeholder="Enter your name" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Username</span>
+                    <input type="text" id="Username" placeholder="Enter your username" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="text" placeholder="Enter your email" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Phone Number</span>
+                    <input type="text" placeholder="Enter your number" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Password</span>
+                    <input type="text" id="password" placeholder="Enter your password" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Confirm Password</span>
+                    <input type="text" placeholder="Confirm your password" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Birthdate</span>
+                    <input type="date" placeholder="Birthdat" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Education</span>
+                    <input type="text" placeholder="Your Education" required>
+                  </div>
+                  
+                </div>
+    
+                <div class="gender-detail">
+                    <input type="radio" name="course" id="dot-1">
+                    <input type="radio" name="course" id="dot-2">
+                    <input type="radio" name="course" id="dot-3">
+                    <span class="gender-title">Course</span>
+                    <div class="category">
+                      <label for="dot-1">
+                      <span class="dot one"></span>
+                      <span class="course">PG-DAC</span>
+                    </label>
+                    <label for="dot-2">
+                      <span class="dot two"></span>
+                      <span class="course">PG-DBDA</span>
+                    </label>
+                    <label for="dot-3">
+                      <span class="dot three"></span>
+                      <span class="course">PG-AI</span>
+                      </label>
+                    </div>
+                  </div>
+    
+
+    
+                <div class="button"> <center>
+                  <input type="submit" style="margin-left: 218px;padding-left: ‒0;"  value="Register" onclick="signup()">
+                  
+                  <input type="reset"  style="margin-left: 218px; margin-top: 15px; ;" value="Reset" ></center>
+                </div>
+                
+              </form>
+            </div>
+          </div>
+    </div>
+    
+    <div class="div9"><p> Website Policies|Copyright Policy|Terms & Conditions |Help|© 2022 C-DAC. All rights reserved|Last Updated: Tuesday, January 04, 2022</p></div>
+    </main>
+
+</body>
+</html>
+
