@@ -1,0 +1,230 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+body {
+  background-image: url("./Images/background.jpg");
+  /* background-size: cover; */
+  margin:0px;
+
+  }
+
+
+
+main{
+  display: grid;
+  color:rgb(0, 0, 0);
+  grid-template-rows: 60px 65px 760px 10px;
+  grid-template-columns: repeat(5,1fr);
+  grid-gap: 1px;
+}
+
+
+a {
+color:black;
+  display: block;
+  text-align: center; 
+   font-size:x-large; 
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a:hover {
+  background-color: #ff9898;
+  color: rgb(0, 0, 0);
+}
+
+.div1{ 
+  color:white;
+  grid-column: 1/-1;
+  background-color: #00b5c2;
+  /* background-color: #00b6c3; */
+
+  text-align:center;
+  font-family: 'Share', cursive;
+  font-size: 55px;
+  padding: 0px;
+}
+
+
+.div2 { 
+
+  background-color: #c7edbc;
+  padding: 10px 0px 10px 0px; 
+}
+.div3{ 
+
+  text-align:center;
+  background-color: #fbf1ac;
+  padding: 10px 0px 10px 0px; 
+  }
+
+.div4{ 
+
+  background-color: #c7edbc;
+  padding: 10px 0px 10px 0px;  
+  }
+.div5{ background-color: #fbf1ac;
+  padding: 10px 0px 10px 0px; 
+  }
+.div6{ 
+  grid-column: 1/-1;
+  grid-row: 3/-1;
+  height: 100vh;
+ margin-left: 260px;
+
+  }
+
+.div7{
+  background-color: #c7edbc;
+  padding: 10px 0px 10px 0px; 
+  grid-column: 5/6;
+  
+
+}
+
+.div8{
+    background-color: #aefefc;
+}
+.div9{ text-align: center;
+  background-color: #ffffff;
+  grid-column: 1/-1;
+  padding: 0px;
+}
+
+.Socialbox{
+  background-color: #ff00f2;
+  width: 40px;
+  height: 40px;
+  border: 1px solid blue;
+  margin-left: 97%;
+  margin-bottom: -50px;
+  background-color: rgb(76, 56, 255);
+  
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  width: 200px;
+  height:140px;
+  margin: 5px;
+  
+}
+
+
+    .container{
+      margin-top: 60px;
+        max-width: 700px;
+        width: 100%;
+        background-color: rgb(234, 255, 139);
+        padding: 25px 30px;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px rgba(227, 12, 12, 0.15);
+      }
+      .container .title{
+        font-size: 25px;
+        font-weight: 500;
+
+      }
+      .container .title::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 30px;
+        border-radius: 5px;
+      
+      }
+      .content form .user-details{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px 0 12px 0;
+      }
+      form .user-details .input-box{
+        margin-bottom: 15px;
+        width: calc(100% / 2 - 20px);
+      }
+      form .input-box span.details{
+        display: block;
+     
+        margin-bottom: 5px;
+      }
+      .user-details .input-box input{
+        height: 55px;
+        width: 100%;
+        outline: none;
+        font-size: 16px;
+        border-radius: 5px;
+        padding-left: 15px;
+        border: 1px solid #ccc;
+        border-bottom-width: 2px;
+        transition: all 0.3s ease;
+      }
+      .user-details .input-box input:focus,
+      .user-details .input-box input:valid{
+        border-color: #2672ff;
+      }
+       form .gender-details .gender-title{
+        font-size: 20px;
+        font-weight: 500;
+       }
+       form .category{
+         display: flex;
+         width: 80%;
+         margin: 14px 0 ;
+         justify-content: space-between;
+       }
+       form .category label{
+         display: flex;
+         align-items: center;
+         cursor: pointer;
+       }
+       form .category label .dot{
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        margin-right: 10px;
+        background: #87ffd3;
+        border: 5px solid transparent;
+        transition: all 0.3s ease;
+      }
+       #dot-1:checked ~ .category label .one,
+       #dot-2:checked ~ .category label .two,
+       #dot-3:checked ~ .category label .three{
+         background: #5fdfff;
+         border-color: #ffffff;
+       }
+       form input[type="radio"]{
+         display: none;
+       }
+       form .button{
+         height: 45px;
+         margin: 35px 0
+       }
+       form .button input{
+         height: 45px;
+         width: 100%;
+         border-radius: 5px;
+         border: none;
+         color: #fff;
+         font-size: 18px;
+         font-weight: 500;
+         letter-spacing: 1px;
+         cursor: pointer;
+         transition: all 0.3s ease;
+         background: linear-gradient(135deg, #6ec5ff, #90ff50);
+       }
+       form .button input:hover{
+        /* transform: scale(0.99); */
+        background: linear-gradient(-135deg, #6ec5ff, #90ff50);
+        }
+       
