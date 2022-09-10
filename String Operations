@@ -38,3 +38,28 @@ public class Main
 	}
 }
 
+
+Reverse String words only ////    " King Is There "  "gnik si ereht "
+public class Main
+{
+    public static void reverse(String s)
+    {
+       String [] string = s.split(" ");  /// save it in array using s.split String 
+       
+       for(String strings : string)
+    {
+        for(int i =strings.length()-1;i>=0;i--)
+        {
+            System.out.print(strings.charAt(i));
+        }
+        System.out.print(" ");
+    }
+    
+    }
+    
+	public static void main(String[] args) {
+	   String s = "king is there";
+	   reverse(s);
+
+	}
+}
