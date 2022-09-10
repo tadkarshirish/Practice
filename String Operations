@@ -1,0 +1,40 @@
+// reverse String 
+public class Main
+{
+    public static void rev(String s )
+    {
+        for(int i=s.length()-1;i>=0;i--)
+        {
+            System.out.print(s.charAt(i));  ///hsirihs
+        }
+        
+    }
+	public static void main(String[] args) {
+		String s = "shirish";
+	    rev(s);
+		System.out.println(s.length()); ///  7
+		System.out.println(s.charAt(0)); /// s
+	}
+	
+}
+
+
+/// Reverse String Using String builder
+public class Main
+{
+    public static StringBuilder reverse(String s)
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.append(s);
+        sb.reverse();
+        return sb;
+    
+    }
+    
+	public static void main(String[] args) {
+	   String s = "king";
+	   StringBuilder rev = reverse(s);
+	   System.out.println(rev);
+	}
+}
+
