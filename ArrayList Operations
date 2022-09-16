@@ -24,7 +24,7 @@ class Main{
        list1.remove(3);  // remove element at specific positionm
        list1.remove(30); // remove specific elemnt from the list 
         list1.trimToSize();    /// trim arraylist to existing size
-    
+     Collections.reverse(list1);   /// reverse the array list
         //for connecting two array list
         list1.addAll(list2);  
     
