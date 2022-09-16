@@ -1,0 +1,46 @@
+import java.util.*;
+import java.util.Iterator;
+
+class Main {
+    
+    
+    public static void main(String args[])
+    {
+        LinkedList <String> list= new LinkedList<String>();
+        
+        list.add("shirish");
+        list.add("new");
+        list.add("project");
+        list.add("working");
+        list.add(1, "Yellow"); //add the element between position
+        list.set(1, "Orange"); //replace 2nd element with new value
+       
+        list.offerLast("Pink"); //add at last position
+       list.remove(2);  // Remove the element in third position from the said linked list
+       list.clear();// remove all elemtn from linked list
+        Collections.swap(list, 0, 2); // swap two elements from LinkedList
+        Collections.shuffle(list); // shuffle all elements in linked list
+      
+         System.out.println(list.pop()); // remove and return the first element of a linked list.
+       System.out.println(list.get(1));  // get element according to postion
+       System.out.println(list.getFirst()); // get first elemtn of linked list
+        System.out.println(list);
+        // list1.addAll(list2); for adding one list with another
+        
+        // https://www.w3resource.com/java-exercises/collection/java-collection-linked-list-exercise-24.php
+        for(String s : list)
+        {
+             System.out.println(s);
+        }  
+    // iterate in forward irection
+        Iterator p = list.listIterator(0);
+        while(p.hasNext()){
+            System.out.println(p.next());
+        }
+     // iterate in reverse  direction
+     Iterator it =list.descendingIterator();
+     while(it.hasNext()){
+            System.out.println(it.next());
+                         }
+    }
+}
