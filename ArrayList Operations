@@ -44,3 +44,60 @@ class Main{
     
     
 }
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+Array List Iterations
+
+package test;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.ListIterator;
+
+public class ArrayListLoopExample {
+
+    public static void main(String args[]){
+     
+        //Creating Arraylist for loop example
+        ArrayList<String> loopList = new ArrayList<String>();
+     
+        //Storing elements in Java Arraylist
+        loopList.add("low cost personal loan");
+        loopList.add("cheap personal loan");
+        loopList.add("personal loan in 24 hours");
+     
+        //Loop Arraylist using foreach loop of JDK1.5
+        System.out.println("=====================================================");
+        System.out.println("ArrayList Loop Example using foreach loop of JDK 1.5");
+        for(String element: loopList){
+            System.out.println(element);
+        }
+     
+        //Loop Arraylist using simple for loop and size method
+        System.out.println("=====================================================");
+        System.out.println("ArrayList Loop Example using for loop and size()");
+        for(int i=0; i<loopList.size(); i++){
+            System.out.println(loopList.get(i));
+        }
+     
+        //Iterate Arraylist using iterator and while loop in Java
+        System.out.println("=====================================================");
+        System.out.println("ArrayList Loop Example using Iterator and while loop");
+        Iterator<String> iterator = loopList.iterator();
+        while(iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
+     
+        //Iterate Arraylist using ListIterator and while loop in Java
+        System.out.println("=====================================================");
+        System.out.println("ArrayList Loop Example using ListIterator and while loop");
+        ListIterator<String> listIterator = loopList.listIterator();
+        while(listIterator.hasNext()){
+            System.out.println(listIterator.next());
+        }
+    }
+}
+
