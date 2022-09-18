@@ -1,0 +1,37 @@
+///////////////////////
+Extending Thread class
+
+public class Main extends Thread {
+    
+    public void run(){
+        
+        System.out.println("Thread is running");
+    }
+    
+    public static void main(String args[])
+    {
+        Main t1 = new Main();
+        t1.start();
+    }
+}
+
+
+?//////////////////////////////////////
+Implementing Runnable Interface
+
+
+public class Main implements Runnable {
+    
+    public void run(){
+        
+        System.out.println("Thread is running");
+    }
+    
+    public static void main(String args[])
+    {
+        
+        Main t1 = new Main();
+        Thread t = new Thread(t1);
+        t.start();
+    }
+}
