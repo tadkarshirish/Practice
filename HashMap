@@ -1,0 +1,47 @@
+import java.util.*;
+import java.util.Map.*;
+import java.util.Map.Entry;
+
+class Main
+{
+    
+    public static void main (String [] args)
+    {
+        
+        HashMap < String, Integer> map1 = new HashMap<String,Integer> ();
+        HashMap <String ,Integer> map2 = new HashMap <String,Integer>(10);
+        HashMap<String,Integer> map3 = new HashMap<String,Integer>(10,0.5f);
+        HashMap<String,Integer> map4 = new HashMap<String,Integer>(map1);
+        
+        
+        map1.put("one",1);
+        map1.put("two",2);
+        map1.put("three",3);
+        
+        map1.putAll(map2); // adding another map to exsisting map
+        System.out.println(map1.size());  // 3 get size of entries
+        map1.remove("one"); // remove the first entry 
+         map1.remove("ONE", 1); // only if it contains value 1 mapped to ONE
+   
+       map.containsValue("two")) /// check if value is present or not 
+       map.containsKey("two")) /// check if key is present or not 
+       
+  map1.clear();// Clear all the mappings 
+       // iteration using keys 
+      Iterator <String> it =map1.keySet().iterator();
+        while(it.hasNext()){
+        String key =it.next();
+            System.out.println(map1.get(key));
+            }
+        
+        // Iteration using keySet
+        Iterator<Entry<String,Integer>> it1 = map1.entrySet().iterator();
+
+        while(it1.hasNext()){
+        Entry<String,Integer> entry = it1.next();
+        System.out.println(entry.getKey());
+        System.out.println(entry.getValue());
+        }
+        
+    }
+}
