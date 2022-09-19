@@ -35,3 +35,70 @@ public class Main implements Runnable {
         t.start();
     }
 }
+
+
+
+
+
+////////////////////////////////////////////
+Synchronisation 
+
+ class Sync{
+    
+    synchronized void m1(){
+        System.out.println("Thread m1 started");
+     try{Thread.sleep(10*1000);}catch(InterruptedException e){}
+    
+          System.out.println("Thread m1 ended");
+    }
+            synchronized static void m2(){
+        System.out.println("Thread m2 started");
+     try{Thread.sleep(10*1000);}catch(InterruptedException e){}
+          System.out.println("Thread m2 ended");  
+    }
+    
+          synchronized static void m3(){
+        System.out.println("Thread m3 started");
+     try{Thread.sleep(10*1000);}catch(InterruptedException e){}
+          System.out.println("Thread m3 ended");  
+    }
+    
+    static void m4(){
+        System.out.println("Thread m4 started");
+     try{Thread.sleep(10*1000);}catch(InterruptedException e){}
+          System.out.println("Thread m4 ended");  
+    }
+    
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		
+		Sync s1 = new Sync();
+		Sync s2 = new Sync();
+		
+		Thread t1 = new Thread (){
+		    public void run(){
+		       // s1.m1();     // lock will be always on object s1
+		   Sync.m2(); // static method lock applied on class then instance and satic method can acces at same time
+		    }  
+		};
+		
+		Thread t2 = new Thread(){
+		    public void run(){
+		      //  s1.m1();
+		     //   Sync.m3(); // as more then one method is static and static lock is applied on class can acces only one method at a time
+		     Sync.m4();// if method is non synchronized there no any realtion with locks it will get executed 
+		        
+		    }
+		};
+		
+		t1.start();
+		try{Thread.sleep(20);}catch(InterruptedException e){}
+		t2.start();
+		
+	
+}
+}
