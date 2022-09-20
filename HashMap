@@ -45,3 +45,32 @@ class Main
         
     }
 }
+
+..//////////////////////////////////////////
+programs to find number of number of character or words 
+// only change the space between them to count the occurense
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+		String line = " Shirish is going to get good package";
+		HashMap < String , Integer> hashmap = new HashMap<String,Integer>();
+		
+		String words[] = line.split(" ");
+		
+		for( String word : words)
+		{
+		    if(hashmap.containsKey(word))
+		    hashmap.put(word,hashmap.get(word)+1);
+		    
+		    else
+		    hashmap.put(word,1);
+		}
+		
+		  System.out.println(hashmap);
+	}
+}
+
