@@ -1,0 +1,57 @@
+class Node{
+	public int data;
+	public Node left;
+	public Node right;
+}
+
+public class Main{
+
+    static Node newNode(int data , Node node)
+	{
+		if(node==null)
+		{
+			node = new Node();
+			node.data=data;
+			node.right = null;
+			node.left=null;
+			return node;
+		}
+		else
+		{
+			Node current = node;
+			if(data >=current.data)
+			{
+				current.right=newNode(data,current.right);
+			}
+			else if(data < current.data)
+			{
+				current.left=newNode(data,current.left);
+			}
+		}
+		return node;
+	}
+	
+	static void printTree(Node root)
+	{
+	if(root!=null)
+	{
+			printTree(root.left);
+			System.out.print(root.data +" ");
+			printTree(root.right);
+		
+	}
+	}
+	
+	public static void main(String args[])
+	{
+
+	Node rootNode = null;
+	rootNode = newNode(6,rootNode);
+	rootNode = newNode(2,rootNode);
+	rootNode =newNode(4,rootNode);
+	rootNode = newNode(7,rootNode);
+	rootNode = newNode(8,rootNode);
+	printTree(rootNode);
+
+	}}
+
