@@ -6,7 +6,7 @@ class Node{
 
 public class Main{
 
-    static Node newNode(int data , Node node)
+    static Node newNode(int data , Node node)    // insertion into BST
 	{
 		if(node==null)
 		{
@@ -31,7 +31,7 @@ public class Main{
 		return node;
 	}
 	
-	static void printTree(Node root)
+	static void printTree(Node root)      // printing binary search tree
 	{
 	if(root!=null)
 	{
@@ -42,7 +42,7 @@ public class Main{
 	}
 	}
 	
-	static int min(Node root)
+	static int min(Node root)              // min in BST
 	{
 	    Node current = root;
 	 while(current.left !=null) 
@@ -52,7 +52,7 @@ public class Main{
     	return current.data;
 	}
 	
-	static int max( Node root)
+	static int max( Node root)		 // max in BST
 	{
 	    Node current = root;
 	    while(current.right!=null)
@@ -62,8 +62,36 @@ public class Main{
 	     	return current.data;
 	    
 	}
-	
-	
+
+	  static void preorder(Node root) {			// Pre order traversal
+        if(root !=  null) {
+            //Visit the node-Printing the node data  
+            System.out.printf("%d ",root.data);
+            preorder(root.left);
+            preorder(root.right);
+            }
+      
+         }
+         
+        static void postorder(Node root) {		// Post order traversal
+        if(root !=  null) {
+            //Visit the node-Printing the node data  
+           postorder(root.left);
+            postorder(root.right);
+             System.out.printf("%d ",root.data);
+            }
+          
+         }
+         
+         static void inorder(Node root) {		// Inorder order traversal
+         if(root !=  null) {
+            //Visit the node-Printing the node data  
+           inorder(root.left);
+           System.out.printf("%d ",root.data);
+            inorder(root.right);
+            }
+           
+         }
 	
 	public static void main(String args[])
 	{
@@ -78,7 +106,12 @@ public class Main{
 	System.out.println("//////");
 	System.out.println(min(rootNode));   // find min mumber 
 	System.out.println(max(rootNode));  // find max number
-	
-
+	System.out.println("//////");
+	System.out.println("Pre Order");
+	preorder(rootNode); 
+	System.out.println("Post Order");
+	postorder(rootNode);
+	System.out.println("Inorder Order");
+	inorder(rootNode);
 	}}
 
