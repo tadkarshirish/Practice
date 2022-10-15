@@ -148,3 +148,79 @@ class test {
 }
 
 
+   
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+import java.util.Scanner;
+
+class test {
+	
+	public static void main(String args[])
+	{
+		
+		int n = 143 ;
+		int orignalno=n;
+		int sum=0;
+		while(n!=0)
+		{
+			int rem = n%10;
+			sum=sum+(rem*rem*rem);
+			n=n/10;
+		}
+		
+		if (orignalno==sum)
+		System.out.println("Given number is amstrong number");
+		else
+		System.out.println("Given number is not amstrong number");
+		
+	}
+
+}
+   
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+factorials of two numbers 
+import java.util.Scanner;
+
+class test {
+	
+	public static void main(String args[])
+	{
+		int num = 5;
+		int fact = 1;
+		for(int i=1;i<=num;i++)
+		{
+			fact = fact* i;
+		}
+		
+		System.out.println(fact);
+	}
+
+}
+   
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Swap two numbers .....
+import java.util.Scanner;
+
+class test {
+	
+	public static void main(String args[])
+	{
+	int a = 33;
+	int b = 44;
+	
+	a = a+b;
+	b = a-b;
+	a = a-b;
+
+		System.out.println(a);
+		System.out.println(b);
+	
+    }
+
+}
+   
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
