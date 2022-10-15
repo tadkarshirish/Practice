@@ -225,6 +225,29 @@ class test {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+import java.util.Scanner;
+
+class test {
+	
+	public static void hano( int n , char A , char B, char C)
+	{
+		if(n>0)
+		{
+		hano(n-1,A,C,B);
+			System.out.println(A+ " to " + C);
+		hano(n-1,B,A,C);
+		}
+		
+	}
+ public static void main (String args[]) 
+ {
+	 
+	int n = 3;
+	hano(n,'A','B','C');
+ }
+ 
+}
+
 
 
 
