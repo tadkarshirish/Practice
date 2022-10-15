@@ -33,3 +33,40 @@ public static void main(String args[])
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+String reverse  using two methods  
+
+
+import java.util.Scanner;
+
+class test {
+	
+	
+	public static void main(String args[]){
+		
+		Scanner s = new Scanner(System.in);
+		
+		System.out.println("Enter the string");
+		String str = s.nextLine();
+			System.out.println(str);
+
+		for(int i =str.length()-1;i>=0;i--)
+		{
+			System.out.print(str.charAt(i));	
+		}
+		
+		System.out.println();
+		StringBuilder sb = new StringBuilder();
+		sb.append("golden");
+		sb.reverse();
+		
+		System.out.println(sb);
+	}
+	
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
