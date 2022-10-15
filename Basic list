@@ -104,6 +104,21 @@ class test {
 
 }
 
+String manupilation methods
+
+ String s = first.concat(second);
+ first.equals(third);
+ System.out.println(str1.toLowerCase());
+ System.out.println(str1.toUpperCase());
+ boolean result = str1.contains("Java");
+  System.out.println(str1.substring(0, 4));
+  System.out.println(str1.replace("C++", "Java"));
+  System.out.println(str1.replace('a', 'z'));
+   int result = str1.indexOf('s');
+     System.out.println(str1.trim());  // to remove starting ending whie spaces
+  System.out.println(str1.substring(1));  // program   == rogram
+   System.out.println(str1.isEmpty());
+   
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
