@@ -1,6 +1,54 @@
 import java.util.*;
 import java.util.Iterator;
 
+void deleteNode(Node del)
+		{
+
+	void insert(int new_data)
+{
+	Node new_node = new Node(new_data);
+	new_node.next = head;
+	new_node.prev=null;
+	if(head != null )
+		head.prev = new_node;
+	head = new_node;
+	
+}
+
+
+void insertAfter(Node prev,int new_data)
+{
+	if(prev == null)
+		{return;}
+	Node new_node = new Node(new_data);
+	new_node.next = prev.next;
+	prev.next = new_node;
+	new_node.prev = prev;
+	new_node.next.prev = new_node;
+	
+}
+
+
+			// Base case
+			if (head == null || del == null) {
+				return;
+			}
+
+			if (head == del) {
+				head = del.next;
+			}
+			if (del.next != null) {
+				del.next.prev = del.prev;
+			}
+			if (del.prev != null) {
+				del.prev.next = del.next;
+			}
+			return;
+		}
+		
+        
+        
+
 class Main {
     
     
