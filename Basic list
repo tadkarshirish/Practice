@@ -145,8 +145,29 @@ class test {
 
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-   
+Palindrome Number
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+    int rev=0;
+    Scanner sc = new Scanner(System.in);
+    int num = sc.nextInt();
+  System.out.println(num);
+  
+  while(num!=0)
+  {
+      int mod = num%10;
+      rev=rev*10+ mod;
+      num=num/10;
+  }
+  System.out.println(rev);  
+      
+}
+}
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 amstrong number
